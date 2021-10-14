@@ -1,8 +1,12 @@
 #ifndef POINT_H
 #define POINT_H
-
+#include <QPainter>
+#include <QColor>
+#include <QDebug>
+#include<QBrush>
 #include <QWidget>
 #include <QGraphicsItem>
+#include <QGraphicsScene>
 class Point :  public QObject,public QGraphicsItem
 
 {

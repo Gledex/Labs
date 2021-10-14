@@ -1,9 +1,5 @@
 #include "point.h"
-#include <QPainter>
-#include <QColor>
-#include <QDebug>
-#include<QBrush>
-#include <QGraphicsScene>
+
 Point::Point(QObject  *parent) : QObject(parent), QGraphicsItem ()
 {
     srand(time(NULL));
@@ -30,16 +26,14 @@ void  Point::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     //Отрисовка
     //painter->setBrush()
     painter->setBrush(QBrush(QColor(rgb),Qt::SolidPattern));
-    painter->drawEllipse(boundingRect());
+    painter->drawEllipse(0,0,2,2);
     Q_UNUSED(option);
     Q_UNUSED(widget);
 }
 void Point::move(){
     //Возможно перепишу
     //Отражение
-    qDebug()<<this->speedX;
     if ((scene()->collidingItems(this).isDetached())){
-        qDebug()<<"какого хуя";
         speedX = -speedX;}
     setPos(mapToParent(0,speedX));
     //x+=speedX;

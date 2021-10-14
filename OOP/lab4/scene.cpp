@@ -10,10 +10,11 @@
 #include <QObject>
 #include <QtWidgets>
 #include <mainwindow.h>
+#include "circle.h"
 Scene::Scene(QObject  *parent) :QGraphicsScene (parent)
 {
 
-    Point * pull[100];//Массив точек, в конечном итоге должно быть 100
+    circle * pull[100];//Массив точек, в конечном итоге должно быть 100
     this->setSceneRect(0,0,640,640);//Размер ограниченной зоны
     //Обводим ограниченную зону красным квадратико
     QPen pen  = QPen(QColor(Qt::red));
@@ -30,7 +31,7 @@ Scene::Scene(QObject  *parent) :QGraphicsScene (parent)
     QTimer *timer = new QTimer();
     //Инициализируем все указатели
     for(int i = 0; i < 2; i++){
-       pull[i] = new Point();
+       pull[i] = new circle(40);
     }
     //Добавляем точку и соединяем каждую точку с таймером и сценой
     for(int i = 0; i < 2; i++){

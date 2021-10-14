@@ -36,6 +36,8 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    circle.cpp
+    circle.h
   )
 
 target_link_libraries(lab4 PRIVATE Qt5::Widgets)
