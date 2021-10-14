@@ -38,6 +38,8 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
     mainwindow.ui
     circle.cpp
     circle.h
+    elipse.cpp
+    elipse.h
   )
 
 target_link_libraries(lab4 PRIVATE Qt5::Widgets)
