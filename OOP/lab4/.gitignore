@@ -1,5 +1,6 @@
 main
 CMakeFiles/*
+build
 CMakeLists.txt.user
 .cmake
 lab4_autogen
